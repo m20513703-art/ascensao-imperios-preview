@@ -2,7 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#13231d">
-<title>Ascensão dos Impérios — Crônicas de Brumavale</title><link rel="stylesheet" href="style.css"></head>
+<title>Ascensão dos Impérios — Crônicas de Brumavale</title><link rel="stylesheet" href="style.css"><style>
+.construction-status{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px;padding:12px;border:1px solid #d6b35a55;border-radius:12px;background:#18271f;color:#e9eee1}.construction-status>div{flex:1 1 220px;min-width:0}.construction-icon{font-size:20px}.construction-copy b{display:block;font-size:12px}.construction-copy small{display:block;color:#bdc6b5;font-size:10px;margin:4px 0 7px}.construction-progress{height:5px;border-radius:8px;background:#ffffff20;overflow:hidden}.construction-progress i{display:block;height:100%;background:linear-gradient(90deg,#86c27f,#edbd61);border-radius:8px;transition:width .5s}.worker-add{cursor:pointer;margin-left:4px;border:1px solid #d5b962;border-radius:50%;background:#263d2c;color:#f2d789;width:23px;height:23px;font-weight:800}
+</style>
+</head>
 <body>
 <section id="introScreen" class="intro-screen" aria-label="Abertura do jogo">
   <div class="intro-card">
@@ -27,4 +30,4 @@
 <section id="battleView" class="battle-view hidden"><div class="battle-top"><button id="backHome" class="small-btn">← Vila</button><div><span class="eyebrow">BATALHA DE CAMPANHA</span><h1 id="battleTitle">Ataque</h1></div><div class="battle-timer" id="battleTimer">00:00</div></div><div class="battle-layout"><div class="battle-field"><canvas id="battleCanvas"></canvas><div id="battleMessage" class="battle-message">Escolha tropas e toque em um ponto de entrada.</div><div class="deploy-help">Toque no campo para posicionar tropas. Toque em uma magia para lançá-la.</div></div><aside class="battle-side"><div class="card"><h3>🐾 Tropas</h3><div id="deployUnits" class="deploy-units"></div><div class="spell-row" id="battleSpells"></div><button id="endBattle" class="secondary-btn">Encerrar batalha</button></div><div class="card"><h3>🎯 Objetivo</h3><p id="battleObjective">Destrua a fortaleza rival ou conquiste 50% da vila.</p><div id="battleStats"></div></div></aside></div></section>
 <div id="modalShade" class="modal-shade hidden"><section class="modal" role="dialog" aria-modal="true"><button id="modalClose" class="modal-x">×</button><div id="modalBody"></div></section></div>
 
-<script src="game.js?v=hide-built-structures-20261030-01"></script></body></html>
+<script src="game.js?v=battle-workers-20261030-01"></script></body></html>
