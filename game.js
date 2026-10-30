@@ -24,6 +24,7 @@ const stageBuildingRequirements={
  4:[['arsenal',1,4],['camp',3,4],['camp',4,1],['bombardTower',1,4],['goldMine',2,4],['elixirCollector',2,4],['goldStorage',1,3],['elixirStorage',1,3],['foxTower',2,4],['sanctuary',1,2],['cauldron',1,2],['stoneCannon',1,2],['ropeTrap',1,2],['eagleTower',1,1],['stoneTrap',1,1]]
 };
 function buildingChecklist(stage=S.f){let missing=[];for(const [type,required,level] of stageBuildingRequirements[stage]||[]){let buildings=S.buildings.filter(b=>b.type===type);let atLevel=buildings.filter(b=>b.level>=level).length;if(buildings.length<required)missing.push(`${names[type]}: faltam ${required-buildings.length} construção(ões) no nível ${level}`);if(buildings.length>=required&&atLevel<required)missing.push(`${names[type]}: melhorar ${required-atLevel} construção(ões) para nível ${level}`);else if(buildings.length<required&&atLevel<buildings.length)missing.push(`${names[type]}: melhorar ${buildings.length-atLevel} construção(ões) existentes para nível ${level}`)}return missing}
+function count(type){return S.buildings.filter(b=>b.type===type).length}
 function addBuilding(type,level){S.buildings.push({id:++S.buildSeq,type,level,seq:S.buildSeq});}
 function ensureBuildings(f){ /* Ascensão não concede estruturas automaticamente. */ }
 function promoteBuildings(){ /* Todas as melhorias são feitas pelo jogador. */ }
